@@ -1,0 +1,16 @@
+services:
+  api:
+    build: .
+    image: notes-api:1.0
+    container_name: notes-api
+    ports:
+      - "${NOTES_API_PORT:-8000}:8000"
+    environment:
+      NOTES_FILE: /app/data/notes.json
+    volumes:
+      - notes-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  notes-data:
+    name: notes-data
