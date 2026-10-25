@@ -1,0 +1,10 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Data lokal (dibuat saat API dipakai)
+notes.json
